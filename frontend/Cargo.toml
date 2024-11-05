@@ -1,0 +1,16 @@
+[package]
+name = "chatatui_frontend"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+# workspace
+chatatui_types.workspace = true
+futures-util.workspace = true
+serde.workspace = true
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+# cargo
+crossterm = { version = "0.28.1", features = ["event-stream"] }
+ratatui = "0.29.0"
+serde_json = "1.0.132"

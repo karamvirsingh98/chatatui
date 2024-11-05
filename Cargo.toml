@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = ["backend", "frontend", "types"]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+
+[workspace.dependencies]
+chatatui_types = { path = "types" }
+serde = { version = "1.0.214", features = ['derive'] }
+tokio = { version = "1.41.0", features = ['full'] }
+tokio-tungstenite = "0.24.0"
+futures = "0.3.31"
+futures-util = { version = "0.3.31", default-features = false, features = [
+    "sink",
+    "std",
+] }

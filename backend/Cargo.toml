@@ -1,0 +1,20 @@
+[package]
+name = "chatatui_backend"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+# workspace
+chatatui_types.workspace = true
+futures.workspace = true
+futures-util.workspace = true
+serde.workspace = true
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+# cargo
+axum = { version = "0.7.7", features = ['ws'] }
+axum-extra = { version = "0.9.4", features = ["typed-header"] }
+headers = "0.4.0"
+tower-http = { version = "0.6.1", features = ["fs", "trace"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
